@@ -1,0 +1,53 @@
+<div id="container">
+  <img src="assets/background.jpg" alt="Flight" id="Background-Image" />
+  <div id="header">
+    <span id="header-content">Flight Ticket Booking</span>
+  </div>
+  <div id="card">
+    <form [formGroup]="FlighDetail">
+      <div id="input-label">
+        <label for="passengerName" id="passengerNameLabel"
+          >Passenger Name:</label
+        >
+        <br />
+        <input
+          type="text"
+          name="name"
+          placeholder="name"
+          id="passengerName"
+          formControlName="passengerName"
+          [(ngModel)]="passengerName"
+        />
+      </div>
+      <div id="input-label">
+        <label for="passengerName" id="passengerNameLabel"
+          >No of Tickets:</label
+        >
+        <br />
+        <input
+          type="number"
+          name="NoOfTicket"
+          placeholder="No of Tickets"
+          id="Tickets"
+          formControlName="Tickets"
+          [(ngModel)]="NoOfTicket"
+        />
+      </div>
+      <div id="input-label">
+        <label for="FlightId" id="FlightIdLabel">FlightId</label>
+        <br />
+        <input
+          type="text"
+          name="FlightId"
+          placeholder="FlightId"
+          id="FlightId"
+          formControlName="flightId"
+        />
+      </div>
+
+      <button type="button" id="Book-Ticket-Button" (click)="BookTickets()">
+        Book
+      </button>
+    </form>
+  </div>
+</div>

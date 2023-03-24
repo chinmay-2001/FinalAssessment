@@ -1,0 +1,127 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onCreateFlight(filter: $filter) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onUpdateFlight(filter: $filter) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteFlight($filter: ModelSubscriptionFlightFilterInput) {
+  onDeleteFlight(filter: $filter) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+subscription OnCreateTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onCreateTicket(filter: $filter) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+subscription OnUpdateTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onUpdateTicket(filter: $filter) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+subscription OnDeleteTicket($filter: ModelSubscriptionTicketFilterInput) {
+  onDeleteTicket(filter: $filter) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}

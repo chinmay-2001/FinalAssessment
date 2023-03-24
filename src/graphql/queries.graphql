@@ -1,0 +1,181 @@
+# this is an auto generated file. This will be overwritten
+query SearchFlights(
+  $filter: SearchableFlightFilterInput
+  $sort: [SearchableFlightSortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableFlightAggregationInput]
+) {
+  searchFlights(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}
+query SearchTickets(
+  $filter: SearchableTicketFilterInput
+  $sort: [SearchableTicketSortInput]
+  $limit: Int
+  $nextToken: String
+  $from: Int
+  $aggregates: [SearchableTicketAggregationInput]
+) {
+  searchTickets(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+    from: $from
+    aggregates: $aggregates
+  ) {
+    items {
+      bookingid
+      passengerName
+      noOfTicket
+      flight {
+        flightid
+        capacity
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+      flightTicketId
+    }
+    nextToken
+    total
+    aggregateItems {
+      name
+      result {
+        ... on SearchableAggregateScalarResult {
+          value
+        }
+        ... on SearchableAggregateBucketResult {
+          buckets {
+            key
+            doc_count
+          }
+        }
+      }
+    }
+  }
+}
+query GetFlight($id: ID!) {
+  getFlight(id: $id) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+query ListFlights(
+  $filter: ModelFlightFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFlights(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
+query GetTicket($id: ID!) {
+  getTicket(id: $id) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+query ListTickets(
+  $filter: ModelTicketFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTickets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      bookingid
+      passengerName
+      noOfTicket
+      flight {
+        flightid
+        capacity
+        id
+        createdAt
+        updatedAt
+      }
+      id
+      createdAt
+      updatedAt
+      flightTicketId
+    }
+    nextToken
+  }
+}

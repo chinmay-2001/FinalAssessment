@@ -1,0 +1,44 @@
+#Background-Image {
+  height: 578px;
+  width: 100%;
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+}
+#container {
+  position: relative;
+}
+table {
+  position: absolute;
+  width: 600px;
+  top: 50px;
+  left: 300px;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+td,
+th {
+  padding-left: 8px;
+}
+
+thead tr {
+  height: 60px;
+  background: #ffed86;
+  font-size: 16px;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}

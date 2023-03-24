@@ -1,0 +1,145 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateFlight(
+  $input: CreateFlightInput!
+  $condition: ModelFlightConditionInput
+) {
+  createFlight(input: $input, condition: $condition) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateFlight(
+  $input: UpdateFlightInput!
+  $condition: ModelFlightConditionInput
+) {
+  updateFlight(input: $input, condition: $condition) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteFlight(
+  $input: DeleteFlightInput!
+  $condition: ModelFlightConditionInput
+) {
+  deleteFlight(input: $input, condition: $condition) {
+    flightid
+    capacity
+    ticket {
+      items {
+        bookingid
+        passengerName
+        noOfTicket
+        id
+        createdAt
+        updatedAt
+        flightTicketId
+      }
+      nextToken
+    }
+    id
+    createdAt
+    updatedAt
+  }
+}
+mutation CreateTicket(
+  $input: CreateTicketInput!
+  $condition: ModelTicketConditionInput
+) {
+  createTicket(input: $input, condition: $condition) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+mutation UpdateTicket(
+  $input: UpdateTicketInput!
+  $condition: ModelTicketConditionInput
+) {
+  updateTicket(input: $input, condition: $condition) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}
+mutation DeleteTicket(
+  $input: DeleteTicketInput!
+  $condition: ModelTicketConditionInput
+) {
+  deleteTicket(input: $input, condition: $condition) {
+    bookingid
+    passengerName
+    noOfTicket
+    flight {
+      flightid
+      capacity
+      ticket {
+        nextToken
+      }
+      id
+      createdAt
+      updatedAt
+    }
+    id
+    createdAt
+    updatedAt
+    flightTicketId
+  }
+}

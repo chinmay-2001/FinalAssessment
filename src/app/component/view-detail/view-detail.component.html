@@ -1,0 +1,23 @@
+<div id="container">
+  <img src="assets/background.jpg" alt="Flight" id="Background-Image" />
+  <table>
+    <thead>
+      <tr>
+        <th>Passenger Name</th>
+        <th>Booking Id</th>
+        <th>No of Tickets</th>
+        <th>Amount</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of Tickets">
+        <td>{{ ticket.passengerName }}</td>
+        <td>{{ ticket.id }}</td>
+        <td>{{ ticket.noOfTicket }}</td>
+        <td>{{ ticket.noOfTicket * 1000 }}</td>
+        <td><button type="button" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
